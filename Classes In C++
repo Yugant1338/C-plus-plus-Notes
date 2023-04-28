@@ -1,0 +1,41 @@
+Using a function inside a class using C++
+Note: 
+Class only can be accessed with a function defined in it; 
+Diretly the variables cannot be accesed outside the class; 
+Only the function can be accessed outside the class which can use the variables inside the class inorder to perform some operation;
+A function must contain access specifier, a function for operations, variable with their data types if any for use in function;
+Variables defined outside the class can also be used in the function if the function has those datatype, Once the variable are used in class_name.function_name(variable), it will call the
+class and then reach out the specific function and perform the operation mentioned in that function.
+Just like a structure a class can also be runned for multiple times using this synatx: class_name class_objname[n](:: n is the number of times class should be runned)
+
+Class Syntax:
+class class_name{
+    access specifier:
+    datatype declaration;
+    void function_name{ // function declaration.
+	function defination
+    }
+};
+int main(){
+    class_name object_name;
+}
+
+
+
+  
+include<iostream>
+using namespace std;
+class class_name{
+    access_specifier:
+    data type declaration;
+    function declaration(whatever you want to use over here){
+	function defination;    	
+    }
+};
+int main(){
+    class_name object_caller;
+    //use the variables declared in the class used in function
+    cin >> object_caller.variable;//(for user input)
+    object_caller.function_name(variable used in function);
+    return 0;
+}
