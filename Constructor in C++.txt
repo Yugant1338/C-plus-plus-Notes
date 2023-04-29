@@ -1,6 +1,6 @@
 Constructor in C++:
 Notes: 
-Constructor are basically a special type ofi functions inside a class that are used to do some work or perform some series of specific action.
+Constructor are basically a special type of functions inside a class that are used to do some work or perform some series of specific action.
 Constructor is named same as the class name, and it does not contains any return type alike functions.
 Multiple constructor with the class name can be declared inside a class but they must contain different arguments and parameters,
 when the specific constructor is called the compiler compare the arguments and calls the specific constructor.
@@ -30,7 +30,7 @@ class helloworld{
    } 
 };
 int main(){
-   helloworld ok;//As soon as the objname is declared 
+   helloworld ok;//As soon as the objname is declared the function is called
    return 0;
 }
 // Output will be Hello World!
@@ -46,7 +46,7 @@ class add{
 int main(){
    int num1,num2;
    cin >> num1 >> num2;
-   add objname(num1,num2);//As soon as the objname is declared 
+   add objname(num1,num2);//As soon as the objname is declared the function is called
    return 0;
 }
 // The sum of num1 and num2 will be printed as output.
@@ -64,7 +64,7 @@ class addition{
 };
 int main(){
    int num1,num2,num2
-   addition objname1(num1,num2,num3);//As soon as the objname is declared 
+   addition objname1(num1,num2,num3);//As soon as the objname is declared the function is called
    addition objname2(num1,num2);// Another object is declared in order to call the other constructor
    // Different object name should be used in order to use different constructor even if they the construcor are named same as the class.
    return 0;
