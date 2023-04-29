@@ -1,0 +1,33 @@
+Structure in C++:
+Note:
+Structure are written as struct struct_name{}; 
+Structure helps for storing data of different data types
+It is basically a array that can hold any datatype and its value
+A single structure can be runned for multiple times using struct struct_name obj_name[n](:: Here n represents the number of times structure is being used with same datatype)
+
+Structure Syntax:
+#include <iostream>
+struct struct_name{
+   datatype1 variable1
+   datatype2 variable2
+   datatype3 variable3
+   datatype n variable n
+}objname;// this name will help to access the structure 
+int main(){
+   //body and use of structure as you want
+   return 0;
+}
+Alternative use:
+#include <iostream>
+struct struct_name{
+   datatype1 variable1
+   datatype2 variable2
+   datatype3 variable3
+   datatype n variable n
+} 
+int main(){
+   struct struct_name objname[n];// this name will help to access the structure and n will give the number of times it is used
+   //body and use of structure as you want
+   return 0;
+}
+   
