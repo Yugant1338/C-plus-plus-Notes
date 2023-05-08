@@ -1,0 +1,20 @@
+Note:
+A friend function is a part of a class that helps to access the private or protected part of that class
+The friend function is declared inside the class itself but defined outside the class.
+Once the friend function is defined outside the class, then it is used in the main function with the obj_name of the class.
+
+
+Syntax:
+#include<iostream>
+using namespace std;
+class class_name{
+    access_specifer(private/protected):
+    datatype and variable declaration;
+    friend return_type function_name(class obj_name(it can be any, just for instant for the class to be used);
+};
+return_type(of friend_function) function_name(class obj_name(to use in here to call the class)){
+    //code *where you want to use any information about class then use obj_name.whatever and then use
+}
+int main(){
+class obj_name;
+function_name(obj_name);// this will intiate to the defination of the code where it can refer to the class if needed and defined in the function 
