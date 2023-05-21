@@ -1,0 +1,138 @@
+Inheritance in C++
+Notes:
+When the public part of a parent function has to be used in another dericed class then the concept of inheritance occurs.
+Inheritance is o two types:
+1. Mutlilevel Inheritance: When a class is derived from a inherited class which itself is inherited from some other class.
+2. Muliple Inheritance: When multiple classes are derived from a single parent class it is know as multiple inheritance.
+
+Synatax:
+1. Multilevel Inheritance:-
+	
+#include<iostream>
+using namespace std;
+class parent_class_name{
+    public:
+    // datatype, variable and function/constructor are declared here.
+};
+class derived1_class_name: public parent_class_name{
+    public:
+    // datatype, variable and function/constructor are declared here.
+};
+class derived2_class_name: public derived1_class_name{
+    public:
+    // datatype, variable and function/constructor are declared here.
+};
+int main(){
+    derived2_class_name obj_name;
+    /* The parent and derived classes can be accessed by using the object name
+       given to the latest derived class */
+    return 0;
+}
+
+Example1:
+#include<iostream>
+using namespace std;
+class car{ // The parent class is derived here
+    public:
+    string carname;
+};
+class model:public car{ 
+      /*The first derived class is defined with its properties inherited from the 
+       previous class i.e. parent class*/
+    public:
+    string modelname;
+};
+class builtyear:public model{
+     /*The second derived class is defined with the properties inherited from the 
+       previous class i.e. the first derived class which already has the properties 
+       inherited from the parent class*/
+    public:
+    int year;
+    void getinfo(){
+	/*A function here uses variables even from the parent class and derived class
+	  as the second derived class has access to both the classes public items*/
+	cin >> carname >> modelname >> year;
+	cout << "The car name is: " << carname << endl;
+	cout << "The model is: " << modelname << endl;
+	cout << "Built year is: " << year;
+    }
+};
+int main(){
+    builtyear mycar;
+    /*Here the object name is used with the latest derived class as per the syntax*/
+    mycar.getinfo();
+    return 0;
+}
+Sample Input:
+Ferrari
+MT2006
+2006
+Sample Output:
+The car name is: Ferrari
+The model is: MT2006
+Built year is: 2006
+
+2. Multiple Inheritance:
+#include<iostream>
+using namespace std;
+class class1_name{
+    public:
+    // datatype, variable and function/constructor are declared here.
+};
+class class2_name{
+    public:
+    // datatype, variable and function/constructor are declared here.
+};
+class derived_class_name: public class1_name , public class2_name{
+    /*Here now together itself the derived class obtained the public properties of both 
+      class1_name and class2_name*/ 
+    public:
+    // datatype, variable and function/constructor are declared here.
+};
+int main(){
+    derived1_class_name obj_name;
+    /* The parent and derived classes can be accessed by using the object name
+       given to the latest derived class */
+    return 0;
+}
+ 
+Example2:
+#include<iostream>
+using namespace std;
+class car{ // The parent class is derived here
+    public:
+    string carname;
+};
+class model{ 
+      /*The second class is defined with its independant properties */
+    public:
+    string modelname;
+};
+class builtyear:public car , public model{
+     /*This class is basically our derived class and has the properties inherited from the 
+       both classes i.e. the first class and the second class*/
+    public:
+    int year;
+    void getinfo(){
+	/*A function here uses variables even from the parent class and derived class
+	  as the second derived class has access to both the classes public items*/
+	cin >> carname >> modelname >> year;
+	cout << "The car name is: " << carname << endl;
+	cout << "The model is: " << modelname << endl;
+	cout << "Built year is: " << year;
+    }
+};
+int main(){
+    builtyear mycar;
+    /*Here the object name is used with the latest derived class as per the syntax*/
+    mycar.getinfo();
+    return 0;
+}
+Sample Input:
+Ferrari
+MT2006
+2006
+Sample Output:
+The car name is: Ferrari
+The model is: MT2006
+Built year is: 2006
